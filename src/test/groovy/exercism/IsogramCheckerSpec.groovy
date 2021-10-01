@@ -5,7 +5,7 @@ import spock.lang.Title
 
 @Title("Isogram Checker Specifications")
 class IsogramCheckerSpec extends Specification {
-    def 'should return #isogram for #description'() {
+    def 'should return #isIsogram for #description'() {
 
         given: "an instance of Isogram Checker class"
         def iso = new IsogramChecker()
