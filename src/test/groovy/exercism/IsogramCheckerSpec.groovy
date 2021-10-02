@@ -1,12 +1,17 @@
 package exercism
 
+import spock.lang.Issue
+import spock.lang.See
 import spock.lang.Specification
 import spock.lang.Title
 
 @Title("Isogram Checker Specifications")
-class IsogramCheckerSpec extends Specification {
-    def 'should return #isIsogram for #description'() {
-
+@See("https://exercism.org/tracks/java/exercises/isogram")
+@Issue("https://exercism.org/tracks/java/exercises/isogram/solutions/rabestro")
+class IsogramCheckerSpec extends Specification
+{
+    def 'should return #isIsogram for #description'()
+    {
         given: "an instance of Isogram Checker class"
         def iso = new IsogramChecker()
 
@@ -29,5 +34,4 @@ class IsogramCheckerSpec extends Specification {
         "accentor"                | false     | "duplicated character in the middle is not isogram"
         "angola"                  | false     | "same first and last"
     }
-
 }
