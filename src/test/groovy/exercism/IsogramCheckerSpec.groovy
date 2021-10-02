@@ -1,11 +1,16 @@
 package exercism
 
 import spock.lang.Issue
+import spock.lang.Narrative
 import spock.lang.See
 import spock.lang.Specification
 import spock.lang.Title
 
 @Title("Isogram Checker Specifications")
+@Narrative("""
+An isogram (also known as a "nonpattern word") is a word or phrase without a repeating letter, 
+however spaces and hyphens are allowed to appear multiple times.
+""")
 @See("https://exercism.org/tracks/java/exercises/isogram")
 @Issue("https://exercism.org/tracks/java/exercises/isogram/solutions/rabestro")
 class IsogramCheckerSpec extends Specification
