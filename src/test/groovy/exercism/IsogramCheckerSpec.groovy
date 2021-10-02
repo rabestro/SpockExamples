@@ -4,6 +4,7 @@ import spock.lang.Issue
 import spock.lang.Narrative
 import spock.lang.See
 import spock.lang.Specification
+import spock.lang.Subject
 import spock.lang.Title
 
 @Title("Isogram Checker Specifications")
@@ -13,6 +14,7 @@ however spaces and hyphens are allowed to appear multiple times.
 """)
 @See("https://exercism.org/tracks/java/exercises/isogram")
 @Issue("https://exercism.org/tracks/java/exercises/isogram/solutions/rabestro")
+@Subject(IsogramChecker)
 class IsogramCheckerSpec extends Specification
 {
     def 'should return #isIsogram for #description'()
