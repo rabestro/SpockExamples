@@ -251,7 +251,7 @@ div.footer {
 </div>
 <div class='summary-report'>
 <h3>Summary:</h3>
-<div class='date-test-ran'>Created on Sat Oct 02 22:25:05 EEST 2021 by jegors.cemisovs</div>
+<div class='date-test-ran'>Created on Mon Oct 04 19:55:47 EEST 2021 by jegors.cemisovs</div>
 <table class='summary-table'>
 <thead>
 <tr>
@@ -266,13 +266,13 @@ div.footer {
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>1</td>
+<td>13</td>
+<td>13</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100.0%</td>
-<td>0.040 seconds</td>
+<td>0.045 seconds</td>
 </tr>
 </tbody>
 </table>
@@ -303,13 +303,49 @@ however spaces and hyphens are allowed to appear multiple times.</pre>
 <tbody>
 <ul id='toc'>
 <li>
-<a href='#1472702846' class='feature-toc-pass'>should return #isIsogram for #description</a>
+<a href='#-756239126' class='feature-toc-pass'>should return true for empty string</a>
+</li>
+<li>
+<a href='#102700551' class='feature-toc-pass'>should return true for lowercase isogram</a>
+</li>
+<li>
+<a href='#1931986584' class='feature-toc-pass'>should return false for not isogram</a>
+</li>
+<li>
+<a href='#-1665669404' class='feature-toc-pass'>should return false for duplicate end alphabet</a>
+</li>
+<li>
+<a href='#-14447587' class='feature-toc-pass'>should return true for medium long isogram</a>
+</li>
+<li>
+<a href='#-1843094216' class='feature-toc-pass'>should return false for case insensitive</a>
+</li>
+<li>
+<a href='#-2094873852' class='feature-toc-pass'>should return false for duplicat mixed case</a>
+</li>
+<li>
+<a href='#-2047170910' class='feature-toc-pass'>should return true for isogram with hyphen</a>
+</li>
+<li>
+<a href='#2119481336' class='feature-toc-pass'>should return false for isogram with duplicated char after hyphen</a>
+</li>
+<li>
+<a href='#-1855994103' class='feature-toc-pass'>should return true for isogram with duplicated hyphen</a>
+</li>
+<li>
+<a href='#2060454939' class='feature-toc-pass'>should return true for made up name that is an isogram</a>
+</li>
+<li>
+<a href='#1703280897' class='feature-toc-pass'>should return false for duplicated character in the middle is not isogram</a>
+</li>
+<li>
+<a href='#-1241470158' class='feature-toc-pass'>should return false for same first and last</a>
 </li>
 </ul>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='1472702846'>
-<span>should return #isIsogram for #description</span>
+<div class='feature-description' id='-756239126'>
+<span>should return true for empty string</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
 </span>
@@ -361,72 +397,720 @@ however spaces and hyphens are allowed to appear multiple times.</pre>
 <td class='ex-value'>empty string</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='102700551'>
+<span>should return true for lowercase isogram</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>isogram</td>
 <td class='ex-value'>true</td>
 <td class='ex-value'>lowercase isogram</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1931986584'>
+<span>should return false for not isogram</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>eleven</td>
 <td class='ex-value'>false</td>
 <td class='ex-value'>not isogram</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1665669404'>
+<span>should return false for duplicate end alphabet</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>zzyzx</td>
 <td class='ex-value'>false</td>
 <td class='ex-value'>duplicate end alphabet</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-14447587'>
+<span>should return true for medium long isogram</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>subdermatoglyphic</td>
 <td class='ex-value'>true</td>
 <td class='ex-value'>medium long isogram</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1843094216'>
+<span>should return false for case insensitive</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>Alphabet</td>
 <td class='ex-value'>false</td>
 <td class='ex-value'>case insensitive</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-2094873852'>
+<span>should return false for duplicat mixed case</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>alphAbet</td>
 <td class='ex-value'>false</td>
 <td class='ex-value'>duplicat mixed case</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-2047170910'>
+<span>should return true for isogram with hyphen</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>thumbscrew-japingly</td>
 <td class='ex-value'>true</td>
 <td class='ex-value'>isogram with hyphen</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='2119481336'>
+<span>should return false for isogram with duplicated char after hyphen</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>thumbscrew-jappingly</td>
 <td class='ex-value'>false</td>
 <td class='ex-value'>isogram with duplicated char after hyphen</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1855994103'>
+<span>should return true for isogram with duplicated hyphen</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>six-year-old</td>
 <td class='ex-value'>true</td>
 <td class='ex-value'>isogram with duplicated hyphen</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='2060454939'>
+<span>should return true for made up name that is an isogram</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>Emily Jung Schwartzkopf</td>
 <td class='ex-value'>true</td>
 <td class='ex-value'>made up name that is an isogram</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1703280897'>
+<span>should return false for duplicated character in the middle is not isogram</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>accentor</td>
 <td class='ex-value'>false</td>
 <td class='ex-value'>duplicated character in the middle is not isogram</td>
 <td class='ex-result'>OK</td>
 </tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1241470158'>
+<span>should return false for same first and last</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>an instance of Isogram Checker class</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the phrase is correctly evaluated</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>input phrase and expected evaluation</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>phrase</th>
+<th class='ex-header'>isIsogram</th>
+<th class='ex-header'>description</th>
+</tr>
+</thead>
+<tbody>
 <tr class='ex-pass'>
 <td class='ex-value'>angola</td>
 <td class='ex-value'>false</td>
@@ -436,9 +1120,6 @@ however spaces and hyphens are allowed to appear multiple times.</pre>
 </tbody>
 </table>
 </div>
-</td>
-<td>
-<div class='spec-status'>13/13 passed</div>
 </td>
 </tr>
 </tbody>

@@ -6,6 +6,7 @@ import spock.lang.See
 import spock.lang.Specification
 import spock.lang.Subject
 import spock.lang.Title
+import spock.lang.Unroll
 
 @Title("Isogram Checker Specifications")
 @Narrative("""
@@ -17,7 +18,8 @@ however spaces and hyphens are allowed to appear multiple times.
 @Subject(IsogramChecker)
 class IsogramCheckerSpec extends Specification
 {
-    def 'should return #isIsogram for #description'()
+    @Unroll("should return #isIsogram for #description")
+    def 'determines if the text is an isogram'()
     {
         given: "an instance of Isogram Checker class"
         def iso = new IsogramChecker()
@@ -33,7 +35,7 @@ class IsogramCheckerSpec extends Specification
         "zzyzx"                   | false     | "duplicate end alphabet"
         "subdermatoglyphic"       | true      | "medium long isogram"
         "Alphabet"                | false     | "case insensitive"
-        "alphAbet"                | false     | "duplicat mixed case"
+        "alphAbet"                | false     | "duplicate mixed case"
         "thumbscrew-japingly"     | true      | "isogram with hyphen"
         "thumbscrew-jappingly"    | false     | "isogram with duplicated char after hyphen"
         "six-year-old"            | true      | "isogram with duplicated hyphen"
