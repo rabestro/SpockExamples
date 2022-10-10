@@ -11,3 +11,4 @@ class SimpleAssertionSpec extends Specification {
         3 * (4 + 7) == 32
     }
 }
+
