@@ -1,12 +1,6 @@
 package exercism
 
-import spock.lang.Issue
-import spock.lang.Narrative
-import spock.lang.See
-import spock.lang.Specification
-import spock.lang.Subject
-import spock.lang.Title
-import spock.lang.Unroll
+import spock.lang.*
 
 @Title("Isogram Checker")
 @Narrative("""
@@ -15,9 +9,8 @@ however spaces and hyphens are allowed to appear multiple times.
 """)
 @See("https://exercism.org/tracks/java/exercises/isogram")
 @Subject(IsogramChecker)
-class IsogramCheckerSpec extends Specification
+class IsogramCheckerTwoSpec extends Specification
 {
-    @Unroll('should return #isIsogram for #description')
     def 'should determines if the text is an isogram'()
     {
         given: 'an instance of Isogram Checker class'
@@ -41,6 +34,9 @@ class IsogramCheckerSpec extends Specification
         'Emily Jung Schwartzkopf' | true      | 'made up name that is an isogram'
         'accentor'                | false     | 'duplicated character in the middle is not isogram'
         'angola'                  | false     | 'same first and last'
+
+        and:
+        isogram = isIsogram ? 'an isogram' : 'not an isogram'
     }
 }
 
